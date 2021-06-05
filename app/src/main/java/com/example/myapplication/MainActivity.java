@@ -52,7 +52,9 @@ public class MainActivity extends AppCompatActivity {
     public void startActivity(View view, String content) {
         View statusBar = findViewById(android.R.id.statusBarBackground);
         View navigationBar = findViewById(android.R.id.navigationBarBackground);
-
+        /**
+         * Pair 既可以保证键值对的数据结构 又可以保证顺序
+         */
         List<Pair<View, String>> pairs = new ArrayList<>();
         pairs.add(Pair.create(statusBar, Window.STATUS_BAR_BACKGROUND_TRANSITION_NAME));
         pairs.add(Pair.create(navigationBar, Window.NAVIGATION_BAR_BACKGROUND_TRANSITION_NAME));

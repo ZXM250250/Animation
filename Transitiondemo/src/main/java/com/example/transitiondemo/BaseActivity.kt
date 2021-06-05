@@ -29,15 +29,18 @@ open class BaseActivity : AppCompatActivity() {
                 duration = 200
                 slideEdge = Gravity.END
             }
+
             it.enterTransition = Slide().apply {
                 duration = 200
                 slideEdge = Gravity.START
 
             }
+
             it.reenterTransition = Slide().apply {
                 duration = 200
                 slideEdge = Gravity.END
             }
+
             it.returnTransition = Slide().apply {
                 duration = 200
                 slideEdge = Gravity.START
