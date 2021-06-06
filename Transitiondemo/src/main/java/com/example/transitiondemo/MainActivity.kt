@@ -17,6 +17,10 @@ import com.example.transitiondemo.R
 import myapplication.BaseActivity
 
 
+/**
+ * 就要就是场景的变化动画   和
+ * makeSceneTransitionAnimation 的view过度动画
+ */
 class MainActivity : BaseActivity() {
 
     private lateinit var btn1: Button
@@ -34,6 +38,10 @@ class MainActivity : BaseActivity() {
         val imgView = findViewById<ImageView>(R.id.img)
 
         btn1.setOnClickListener {
+
+            /**
+             * 进行专场的操作
+             */
             val intent = Intent()
             val pair1 = Pair(imgView as View, imgView.transitionName)
             val pair2 = Pair(textView as View, textView.transitionName)
@@ -48,16 +56,24 @@ class MainActivity : BaseActivity() {
         btn2.setOnClickListener {
             val intent = Intent()
             intent.setClass(this, ThirdActivity::class.java)
+            /**
+             * 这个方法进行的是一种  view
+             * 的过度效果 由前一个过度到后一个
+             */
             val transitionActivityOptions = ActivityOptions.makeSceneTransitionAnimation(
                 this@MainActivity
             )
             startActivity(intent, transitionActivityOptions.toBundle())
+          //  startActivity(intent)
         }
 
     }
 
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     private fun setThisUpWindow() {
+        /**
+         * 为转场元素设置动画
+         */
         window.sharedElementEnterTransition = ChangeBounds()
         window.sharedElementExitTransition = ChangeBounds()
     }

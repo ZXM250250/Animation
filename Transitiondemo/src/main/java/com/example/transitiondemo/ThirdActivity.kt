@@ -18,6 +18,7 @@ class ThirdActivity : BaseActivity() {
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onCreate(savedInstanceState: Bundle?) {
         requestWindowFeature(Window.FEATURE_CONTENT_TRANSITIONS)
+
         window.sharedElementEnterTransition = ChangeBounds()
         window.sharedElementExitTransition = ChangeBounds()
         super.onCreate(savedInstanceState)
@@ -26,6 +27,10 @@ class ThirdActivity : BaseActivity() {
         val btn = findViewById<Button>(R.id.btnChange)
         val sceneRoot = findViewById<FrameLayout>(R.id.container)
 
+
+        /**
+         * 场景转换的动画效果
+         */
         val scene1 = Scene.getSceneForLayout(sceneRoot, R.layout.scene1, this)
         val scene2 = Scene.getSceneForLayout(sceneRoot, R.layout.scene2, this)
 
@@ -34,7 +39,7 @@ class ThirdActivity : BaseActivity() {
         btn.setOnClickListener {
             count = if (count == 1) {
                 val transition =
-                    TransitionInflater.from(this).inflateTransition(R.transition.slide_transition)
+                    TransitionInflater.from(this).inflateTransition(R.transition.explore_transition)
                 TransitionManager.go(scene2, transition)
                 2
             } else {

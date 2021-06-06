@@ -1,3 +1,4 @@
+include ':view-animation'
 include ':Transitiondemo'
 include ':myapplication'
 include ':app'

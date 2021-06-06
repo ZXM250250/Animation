@@ -24,7 +24,7 @@ import java.util.List;
 
 
 /**
- * 一个列表点击 共享元素 置顶打开的效果
+ * 一个列表点击 共享元素 置顶  就像折叠打开的效果
  */
 public class MainActivity extends AppCompatActivity {
 

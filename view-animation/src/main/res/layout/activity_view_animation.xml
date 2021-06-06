@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ViewAnimationActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"/>
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/do_btn_bg"
+        android:gravity="center"
+        android:lines="1"
+        android:textColor="@color/black"
+        android:text="Common ViewAnimation"
+        android:textAllCaps="false"
+        android:textSize="12sp"/>
+
+    <Button
+        android:id="@+id/btn2"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/do_btn_bg"
+        android:gravity="center"
+        android:lines="1"
+        android:text="PopupWindow ViewAnimation"
+        android:textAllCaps="false"
+        android:textSize="12sp"/>
+
+    <Button
+        android:id="@+id/btn3"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/do_btn_bg"
+        android:gravity="center"
+        android:lines="1"
+        android:text="RecycleView ViewAnimation"
+        android:textAllCaps="false"
+        android:textSize="12sp"/>
+</androidx.appcompat.widget.LinearLayoutCompat>

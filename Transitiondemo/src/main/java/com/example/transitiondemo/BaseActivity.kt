@@ -17,6 +17,9 @@ open class BaseActivity : AppCompatActivity() {
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     private fun setUpWindow() {
         window.let {
+            /**
+             * 设置分享元素的转场
+              */
             it.sharedElementEnterTransition
             it.sharedElementExitTransition
             it.sharedElementReenterTransition
